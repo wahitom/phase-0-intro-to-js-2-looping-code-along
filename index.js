@@ -10,12 +10,30 @@
 }
 writeCards(["Guadalupe", "Ollie", "Aki"],  "suprise" );  */
 
-function writeCards(names, message) {
+/* function writeCards(names, message) {
     for (let i = 0; i < names.length; i++){
         console.log(`Thank you, ${names[i]}, for the wonderful ${message} gift!`);
     }
 }
 
+const names = ["Guadalupe", "Ollie", "Aki"];
+const message = "surprise";
+const thankYouMessages = writeCards(names, message);
+console.log(thankYouMessages); */
+
+function writeCards(names, message) {
+    const thankYouMessages = [];
+
+    for (let i = 0; i < names.length; i++) {
+        const name = names[i];
+        const thankYouMessage = `Thank you, ${name}, for the wonderful ${message} gift!`;
+        thankYouMessages.push(thankYouMessage);
+    }
+
+    return thankYouMessages;
+}
+
+// Example usage:
 const names = ["Guadalupe", "Ollie", "Aki"];
 const message = "surprise";
 const thankYouMessages = writeCards(names, message);
